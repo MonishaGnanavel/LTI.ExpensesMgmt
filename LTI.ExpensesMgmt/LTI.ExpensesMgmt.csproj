@@ -44,21 +44,30 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="Microsoft.SharePoint" />
     <Reference Include="Microsoft.SharePoint.Client.ServerRuntime" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="NewsWebpart\NewsWebpart.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Features\ExpensesList\ExpensesList.feature">
       <FeatureId>{dc1047c6-7049-4860-b4a1-716fafedd07f}</FeatureId>
     </None>
+    <None Include="Features\ExpensesWebpart\ExpensesWebpart.feature">
+      <FeatureId>{895f7fc3-51a8-442f-99d6-e6bb765403cf}</FeatureId>
+    </None>
     <None Include="key.snk" />
     <None Include="NewsList\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{420427e1-759e-4715-921d-b5cc851a5589}</SharePointProjectItemId>
+    </None>
+    <None Include="NewsWebpart\NewsWebpart.webpart" />
+    <None Include="NewsWebpart\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{3327a884-8ff5-44fb-80cd-542eb709f973}</SharePointProjectItemId>
     </None>
     <None Include="Package\Package.package">
       <PackageId>{e40534e0-6763-405c-8020-08a44fbd8e28}</PackageId>
@@ -72,7 +81,11 @@
     <Content Include="Features\ExpensesList\ExpensesList.Template.xml">
       <DependentUpon>ExpensesList.feature</DependentUpon>
     </Content>
+    <Content Include="Features\ExpensesWebpart\ExpensesWebpart.Template.xml">
+      <DependentUpon>ExpensesWebpart.feature</DependentUpon>
+    </Content>
     <Content Include="NewsList\Elements.xml" />
+    <Content Include="NewsWebpart\Elements.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
